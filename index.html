@@ -25,29 +25,29 @@
             <img src="img/quiz.png" class="card-img-top">
             <div class="card-body">
                 <h5 class="card-title" id="headquestion">Frage</h5>
-                <div class="card mb-2">
-                    <div class="card-body" id="answer1">
+                <div class="card mb-2 quiz-color" onclick="answer('answer_1')">
+                    <div class="card-body" id="answer_1">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
-                    <div class="card-body" id="answer2">
+                <div class="card mb-2 quiz-color" onclick="answer('answer_2')">
+                    <div class="card-body" id="answer_2">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
-                    <div class="card-body" id="answer3">
+                <div class="card mb-2 quiz-color" onclick="answer('answer_3')">
+                    <div class="card-body" id="answer_3">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2">
-                    <div class="card-body" id="answer4">
+                <div class="card mb-2 quiz-color" onclick="answer('answer_4')">
+                    <div class="card-body" id="answer_4">
                         Antwort
                     </div>
                 </div>
                 <div class="question-footer">
-                    <span><b>1</b> von <b id="max-length-questions">5</b> Fragen</span>
-                    <button type="button" class="btn btn-info">Nächste Frage</button>
+                    <span><b id="questionnumber">1</b> von <b id="max-length-questions">5</b> Fragen</span>
+                    <button type="button" class="btn btn-info" onclick="showQuestion()">Nächste Frage</button>
                 </div>
             </div>
         </div>
