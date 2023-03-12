@@ -22,8 +22,20 @@
 
     <div class="container-flex">
         <div class="card question-card">
-            <img src="img/quiz.png" class="card-img-top">
-            <div class="card-body">
+            <img src="img/quiz.png" id="header-img" class="card-img-top">
+            <div class="progress">
+                <div class="progress-bar" style="width: 0%" id="progress-bar">0%</div>
+              </div>
+
+            <div class="card-body" id="endScreen" style="display: none">
+                <div class="text-center">Quiz beendet</div>
+
+                <div class="text-center">
+                    Du hast <b id="amount-of-right-questions">XXX</b> Fragen von <b id="amount-of-questions">XXX</b> richtig beantwortet.
+                </div>
+            </div>
+
+            <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="headquestion">Frage</h5>
                 <div class="card mb-2 quiz-color" onclick="answer('answer_1')">
                     <div class="card-body" id="answer_1">
@@ -47,7 +59,8 @@
                 </div>
                 <div class="question-footer">
                     <span><b id="questionnumber">1</b> von <b id="max-length-questions">5</b> Fragen</span>
-                    <button type="button" class="btn btn-info" onclick="showQuestion()">Nächste Frage</button>
+                    <button id="next-button" type="button" class="btn btn-info" disabled
+                        onclick="nextQuestion()">Nächste Frage</button>
                 </div>
             </div>
         </div>
