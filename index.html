@@ -14,45 +14,45 @@
 </head>
 
 <body onload="init()">
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">Quiz App</span>
-        </div>
-    </nav>
-
     <div class="container-flex">
-        <div class="card question-card">
-            <img src="img/quiz.png" id="header-img" class="card-img-top">
-            <div class="progress">
-                <div class="progress-bar" style="width: 0%" id="progress-bar">0%</div>
-              </div>
+        <div class="card question-card full-screen-media">
+            <img src="img/quiz.png" id="header-img" class="card-img-top quiz-img-height">
+
+            <div class="progress progress-bar-style">
+                <div class="progress-bar progress-background" style="width: 100%" id="progress-bar">0%</div>
+            </div>
 
             <div class="card-body" id="endScreen" style="display: none">
-                <div class="text-center">Quiz beendet</div>
+                <div class="text-center quiz-finish"><b>Quiz beendet</b></div>
 
                 <div class="text-center">
-                    Du hast <b id="amount-of-right-questions">XXX</b> Fragen von <b id="amount-of-questions">XXX</b> richtig beantwortet.
+                    Du hast <b id="amount-of-right-questions">XXX</b> Fragen von <b id="amount-of-questions">XXX</b>
+                    richtig beantwortet.
+                </div>
+                <div class="button-row">
+                    <button type="button" class="btn btn-info" onclick="restartGame()">Erneut
+                        spielen</button>
                 </div>
             </div>
 
             <div class="card-body" id="questionBody">
                 <h5 class="card-title" id="headquestion">Frage</h5>
-                <div class="card mb-2 quiz-color" onclick="answer('answer_1')">
+                <div class="card mb-2 quiz-color answer-style" id="answer_head_1" onclick="answer('answer_1')">
                     <div class="card-body" id="answer_1">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2 quiz-color" onclick="answer('answer_2')">
+                <div class="card mb-2 quiz-color answer-style" id="answer_head_2" onclick="answer('answer_2')">
                     <div class="card-body" id="answer_2">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2 quiz-color" onclick="answer('answer_3')">
+                <div class="card mb-2 quiz-color answer-style" id="answer_head_3" onclick="answer('answer_3')">
                     <div class="card-body" id="answer_3">
                         Antwort
                     </div>
                 </div>
-                <div class="card mb-2 quiz-color" onclick="answer('answer_4')">
+                <div class="card mb-2 quiz-color answer-style" id="answer_head_4" onclick="answer('answer_4')">
                     <div class="card-body" id="answer_4">
                         Antwort
                     </div>
